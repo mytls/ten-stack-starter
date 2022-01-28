@@ -1,5 +1,5 @@
-import { NextFunction, Request, Response } from "express";
-import { Inject, Service } from "typedi";
+import { Request, Response } from "express";
+import { Service } from "typedi";
 import HomeService from "./home.service";
 
 @Service()

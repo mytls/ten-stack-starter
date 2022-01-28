@@ -19,7 +19,7 @@ describe("test API'S", () => {
       .get("/")
       .expect("Content-Type", /json/)
       .expect("Content-Length", "13")
-      .end((err, res) => {
+      .end((err) => {
         if (err) throw new Error(err);
       });
   });
