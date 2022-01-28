@@ -11,6 +11,17 @@ Typescript + Express.js + Node.js Starter with best practice structure
 
 🔄A live project template that is constantly being updated
 
+**Clone**
+
+```npm
+git clone https://github.com/mytls/ten-stack-starter.git
+```
+*or*
+```npm
+degit https://github.com/mytls/ten-stack-starter.git project-name
+```
+
+
 **build**
 
 ```npm
