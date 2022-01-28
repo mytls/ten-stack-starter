@@ -2,9 +2,13 @@
   "name": "ten-stack-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "bin/www.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:build": "tsc",
+    "start:watch": "tsc -w",
+    "start:app": "nodemon dist/app.js",
+    "start:bin": "nodemon bin/www.js",
+    "start": "concurrently npm:start:*"
   },
   "repository": {
     "type": "git",
