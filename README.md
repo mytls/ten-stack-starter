@@ -18,6 +18,9 @@ git clone https://github.com/mytls/ten-stack-starter.git
 ```
 *or*
 ```npm
+npm i -g degit
+```
+```npm
 degit https://github.com/mytls/ten-stack-starter.git project-name
 ```
 
