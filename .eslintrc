@@ -1,0 +1,80 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-security",
+    "security",
+    "xss",
+    "filenames",
+    "prettier",
+    "@typescript-eslint/eslint-plugin"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:security/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "problems",
+    "plugin:regexp/recommended"
+  ],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "no-useless-constructor": "off",
+    "no-console": "off",
+    "no-inner-declarations": "off",
+    "no-unused-vars": "off",
+    "unicorn/no-array-reduce": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "camelcase": [2, { "properties": "always" }],
+    "no-loss-of-precision": 2,
+    "xss/no-mixed-html": [
+      2,
+      {
+        "htmlVariableRules": ["AsHtml", "HtmlEncoded/i", "^html$"],
+        "htmlFunctionRules": [".asHtml/i", "toHtml"],
+        "functions": {
+          "$": {
+            "htmlInput": true,
+            "safe": ["document", "this"]
+          },
+          ".html": {
+            "htmlInput": true,
+            "htmlOutput": true
+          },
+          ".join": {
+            "passthrough": { "obj": true, "args": true }
+          }
+        }
+      }
+    ],
+    "xss/no-location-href-assign": [
+      2,
+      {
+        "escapeFunc": "escapeHref"
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
