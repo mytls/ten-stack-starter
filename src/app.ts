@@ -2,11 +2,14 @@ import "reflect-metadata";
 import bodyParser from "body-parser";
 import express from "express";
 import homeRoute from "./components/home/home.routes";
+import helmet from "./middlewares/helmet";
 
 const app = express();
 
 app.use(bodyParser.json({ limit: "300kb" }));
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(helmet);
 
 app.use(homeRoute);
 
