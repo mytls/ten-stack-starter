@@ -14,7 +14,7 @@ Typescript + Express.js + Node.js Starter with best practice structure
 **Better way**
 
 ```npm
-npm i -g mmdzov
+npm i -g mmdzov-cli
 ```
 
 ```npm
