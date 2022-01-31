@@ -11,6 +11,18 @@ Typescript + Express.js + Node.js Starter with best practice structure
 
 🔄A live project template that is constantly being updated
 
+**Better way**
+
+```npm
+npm i -g mmdzov-cli
+```
+
+```npm
+mmdzov use ten <project-name>
+```
+[more detail...](https://github.com/mmdzov/mmdzov-cli) 
+
+
 **Clone**
 
 ```npm
