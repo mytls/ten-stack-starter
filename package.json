@@ -25,6 +25,7 @@
   "bugs": {
     "url": "https://github.com/mytls/ten-stack-starter/issues"
   },
+  "types": "index.d.ts",
   "homepage": "https://github.com/mytls/ten-stack-starter#readme",
   "devDependencies": {
     "@types/chai": "^4.3.0",

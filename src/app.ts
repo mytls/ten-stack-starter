@@ -1,8 +1,8 @@
 import "reflect-metadata";
 import bodyParser from "body-parser";
 import express from "express";
-import homeRoute from "./components/home/home.routes";
 import helmet from "./middlewares/helmet";
+import routes from "./routes";
 
 const app = express();
 
@@ -11,6 +11,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(helmet);
 
-app.use(homeRoute);
+routes(app);
 
 export default app;
