@@ -11,6 +11,16 @@ Typescript + Express.js + Node.js Starter with best practice structure
 
 🔄A live project template that is constantly being updated
 
+**Better way**
+
+```npm
+npm i -g mmdzov
+```
+
+```npm
+mmdzov use ten <project-name>
+```
+
 **Clone**
 
 ```npm
