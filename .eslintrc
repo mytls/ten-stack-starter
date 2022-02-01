@@ -28,6 +28,7 @@
     "node": true
   },
   "rules": {
+    "@typescript-eslint/no-namespace": "off",
     "no-useless-constructor": "off",
     "no-console": "off",
     "no-inner-declarations": "off",
