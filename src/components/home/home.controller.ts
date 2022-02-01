@@ -1,3 +1,4 @@
+//controller layer - handle requests
 import { Request, Response } from "express";
 import { Service } from "typedi";
 import HomeService from "./home.service";

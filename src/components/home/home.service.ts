@@ -1,9 +1,14 @@
+//service layer - your business logic
 import { Service } from "typedi";
+import HomeDAL from "./home.DAL";
 
 @Service()
 class HomeService {
+  constructor(private homeDAL: HomeDAL) {}
+
   sayHello() {
-    return "Hello world";
+    const response = this.homeDAL.create();
+    return `${response} & Hello world`;
   }
 }
 
