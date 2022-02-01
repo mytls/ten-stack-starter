@@ -5,17 +5,17 @@ import { TMiddleware } from "..";
 
 //? Location of decorators
 
-export const Needs = ({
-  app,
-  routes,
-  middlewares,
-}: {
-  app: Express;
-  routes: (app: Express) => Express[];
-  middlewares?: TMiddleware[];
-}) => {
-  return (_ctr: any) => {
+export const Needs =
+  ({
+    app,
+    routes,
+    middlewares,
+  }: {
+    app: Express;
+    routes: (app: Express) => Express[];
+    middlewares?: TMiddleware[];
+  }) =>
+  (_ctr: any) => {
     middlewares?.map((middleware: TMiddleware) => app.use(middleware));
     routes(app);
   };
-};
