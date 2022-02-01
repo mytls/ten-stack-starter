@@ -15,10 +15,10 @@ export const Needs = ({
   middlewares?: TMiddleware[];
 }) => {
   return (_ctr: any) => {
-    routes(app);
     middlewares?.map((middleware: TMiddleware) => {
       app.use(middleware);
       return null;
     });
+    routes(app);
   };
 };
