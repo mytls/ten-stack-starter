@@ -1,12 +1,14 @@
 import "reflect-metadata";
-import express from "express";
 import { Container } from "typedi";
 import HomeController from "./home.controller";
-
-const homeRoute = express.Router();
+import Implementer from "../../shared/Implementer";
 
 const controller = Container.get(HomeController);
 
-homeRoute.get("/", (req, res) => controller.sayHello(req, res));
+const homeRoute = Implementer({
+  path: "/",
+  method: "get",
+  attach: controller.sayHello,
+});
 
 export default homeRoute;

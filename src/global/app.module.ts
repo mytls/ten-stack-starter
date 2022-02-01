@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Express } from "express";
+import { Express, NextFunction, Request, Response } from "express";
 import { TMiddleware } from "../..";
+import { _attacher } from "./_attacher";
 
 //? Location of decorators
 
@@ -16,6 +17,8 @@ export const Needs =
     middlewares?: TMiddleware[];
   }) =>
   (_ctr: any) => {
-    middlewares?.map((middleware: TMiddleware) => app.use(middleware));
+    middlewares?.map((middleware: TMiddleware) =>
+      app.use(_attacher(middleware))
+    );
     routes(app);
   };

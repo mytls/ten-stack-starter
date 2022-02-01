@@ -10,7 +10,7 @@ class HomeController {
 
   sayHello(req: Request, res: Response) {
     // validate data before calling service
-    const validate = this.homeDTO.validate({ num: 11 });
+    const validate = this.homeDTO.validate({ num: 10 });
     if (typeof validate === "string") return res.json(validate);
 
     // call the following code when validated data
