@@ -1,12 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextFunction, Request, Response, Router } from "express";
 
 declare module "express" {
   export interface Request {
-    prop: string;
+    [key: string]: any;
   }
 
   export interface Response {
-    prop: string;
+    [key: string]: any;
   }
 }
 
