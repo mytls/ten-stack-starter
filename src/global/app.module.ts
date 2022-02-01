@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Express } from "express";
-import { TMiddleware } from "..";
+import { TMiddleware } from "../..";
 
 //? Location of decorators
 

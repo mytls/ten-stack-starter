@@ -3,8 +3,8 @@ import "reflect-metadata";
 import bodyParser from "body-parser";
 import express from "express";
 import helmet from "./middlewares/helmet";
-import routes from "./routes";
-import { Needs } from "./app.module";
+import routes from "./global/routes";
+import { Needs } from "./global/app.module";
 
 const app = express();
 
