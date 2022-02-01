@@ -9,8 +9,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true,
-    "incremental": true
+    "skipLibCheck": true
   },
   "include": ["src", "www", "index.d.ts"],
   "exclude": ["dist", "node_modules", "src/**/*.spec.ts"]

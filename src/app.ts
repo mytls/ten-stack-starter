@@ -5,8 +5,9 @@ import express from "express";
 import helmet from "./middlewares/helmet";
 import routes from "./global/routes";
 import { Needs } from "./global/app.module";
+import * as appGlobal from "./global/app.global";
 
-const app = express();
+const app = appGlobal.default;
 
 @Needs({
   app,
