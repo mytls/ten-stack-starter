@@ -15,6 +15,9 @@ const app = express();
     bodyParser.urlencoded({ extended: false }),
     bodyParser.json({ limit: "300kb" }),
     helmet,
+    (req, res, next) => {
+      console.log(req.url);
+    },
   ],
 })
 class AppNeeds {}
