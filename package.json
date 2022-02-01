@@ -5,8 +5,8 @@
   "main": "bin/www.js",
   "bin": "bin/www.js",
   "scripts": {
-    "start:build": "tsc",
-    "start:watch": "tsc -w",
+    "build": "tsc",
+    "start:dev": "tsc -w",
     "start:bin": "nodemon bin/www.js",
     "start": "concurrently npm:start:*",
     "test": "npx mocha",

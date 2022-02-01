@@ -1,6 +1,6 @@
-import { TRoute } from "..";
 import homeRoute from "./components/home/home.routes";
 import { Express } from "express";
+import { TRoute } from "..";
 
 const routes: TRoute[] = [{ path: "/", route: homeRoute }];
 
