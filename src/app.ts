@@ -4,12 +4,12 @@ import bodyParser from "body-parser";
 import express from "express";
 import helmet from "./middlewares/helmet";
 import routes from "./global/routes";
-import { Needs } from "./global/app.module";
 import * as appGlobal from "./global/app.global";
+import _needs from "./global/_needs";
 
 const app = appGlobal.default;
 
-@Needs({
+_needs({
   app,
   routes,
   middlewares: [
@@ -17,7 +17,6 @@ const app = appGlobal.default;
     bodyParser.json({ limit: "300kb" }),
     helmet,
   ],
-})
-class AppNeeds {}
+});
 
 export default app;

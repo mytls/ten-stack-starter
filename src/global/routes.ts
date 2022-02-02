@@ -1,7 +1,7 @@
 import homeRoute from "../components/home/home.routes";
 import { Express } from "express";
 import { TRoute } from "../..";
-import { _attacher } from "./_attacher";
+import _attacher from "./_attacher";
 
 const routes: TRoute[] = [{ path: "/", route: homeRoute }];
 

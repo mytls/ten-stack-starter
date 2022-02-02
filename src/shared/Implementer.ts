@@ -1,6 +1,6 @@
 /* eslint-disable security/detect-object-injection */
 import express, { NextFunction, Request, Response } from "express";
-import { _attacher } from "../global/_attacher";
+import _attacher from "../global/_attacher";
 
 type TAttach = (req: Request, res: Response, next?: NextFunction) => Response;
 
