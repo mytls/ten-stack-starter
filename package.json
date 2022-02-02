@@ -12,7 +12,7 @@
     "test": "npx mocha",
     "test:watch": "npx mocha --watch",
     "lint": "eslint src/**/*.ts --fix",
-    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+    "pretty": "prettier --write ."
   },
   "repository": {
     "type": "git",

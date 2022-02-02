@@ -1,4 +1,5 @@
 # ten-stack-starter
+
 Typescript + Express.js + Node.js Starter with best practice structure
 
 🦺Safety when developing with liners.
@@ -19,12 +20,11 @@ _The complexity of projects is greatly reduced_
 
 ### Structure and layers
 
-
 **Controller Layer**
 
 - It is solely responsible for managing requests
 
-**Checkpoint layer** 
+**Checkpoint layer**
 
 - It is only responsible for managing the input data and its validation
 
@@ -47,22 +47,24 @@ npm i -g mmdzov-cli
 ```npm
 mmdzov use ten <project-name>
 ```
-[more...](https://github.com/mmdzov/mmdzov-cli) 
 
+[more...](https://github.com/mmdzov/mmdzov-cli)
 
 **Clone**
 
 ```npm
 git clone https://github.com/mytls/ten-stack-starter.git
 ```
-*or*
+
+_or_
+
 ```npm
 npm i -g degit
 ```
+
 ```npm
 degit https://github.com/mytls/ten-stack-starter.git project-name
 ```
-
 
 **build**
 
@@ -93,4 +95,3 @@ npm run test:watch
 ```npm
 npm run lint
 ```
-
