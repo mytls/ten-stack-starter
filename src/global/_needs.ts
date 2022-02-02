@@ -1,18 +1,19 @@
 import { Express } from "express";
-import { TMiddleware } from "../..";
+import { TMiddleware, TRoute } from "../..";
+import routes from "./routes";
 import _attacher from "./_attacher";
 
 const _needs = ({
   app,
-  routes,
+  router,
   middlewares,
 }: {
   app: Express;
-  routes: (app: Express) => Express[];
+  router: TRoute[];
   middlewares?: TMiddleware[];
 }) => {
   middlewares?.map((middleware: TMiddleware) => app.use(_attacher(middleware)));
-  routes(app);
+  routes(app, router);
 };
 
 export default _needs;
