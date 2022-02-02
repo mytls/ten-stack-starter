@@ -3,11 +3,11 @@ import { expect } from "chai";
 import HomeService from "./home.service";
 import request from "supertest";
 import app from "../../app";
-import Container from "typedi";
+import { container } from "tsyringe";
 
 describe("service tests", () => {
   it("should to be string and must have hello world", () => {
-    const homeService = Container.get(HomeService);
+    const homeService = container.resolve(HomeService);
 
     const result = homeService.sayHello();
     expect(result).to.be.a("string").to.have.contain("Hello world");
