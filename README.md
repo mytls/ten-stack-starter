@@ -11,7 +11,34 @@ Typescript + Express.js + Node.js Starter with best practice structure
 
 🔄A live project template that is constantly being updated
 
-**Better way**
+---
+
+_This structure is designed for large-scale projects, but you can also use it for small projects_
+
+_The complexity of projects is greatly reduced_
+
+### Structure and layers
+
+
+**Controller Layer**
+
+- It is solely responsible for managing requests
+
+**Checkpoint layer** 
+
+- It is only responsible for managing the input data and its validation
+
+**Service Layer**
+
+- This is only the function of business logic
+
+**Data Access Layer ( DAL )**
+
+- It only has the task of communicating with the database like crud
+
+---
+
+**Easy installation and use**
 
 ```npm
 npm i -g mmdzov-cli
@@ -20,7 +47,7 @@ npm i -g mmdzov-cli
 ```npm
 mmdzov use ten <project-name>
 ```
-[more detail...](https://github.com/mmdzov/mmdzov-cli) 
+[more...](https://github.com/mmdzov/mmdzov-cli) 
 
 
 **Clone**
