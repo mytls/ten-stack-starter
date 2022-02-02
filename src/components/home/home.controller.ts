@@ -1,10 +1,10 @@
 //controller layer - handle requests
 import { Request, Response } from "express";
-import { Service } from "typedi";
 import HomeDTO from "./home.DTO";
 import HomeService from "./home.service";
+import { injectable } from "tsyringe";
 
-@Service()
+@injectable()
 class HomeController {
   constructor(private homeService: HomeService, private homeDTO: HomeDTO) {}
 

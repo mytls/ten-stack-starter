@@ -1,14 +1,12 @@
-import "reflect-metadata";
-import { Container } from "typedi";
-import HomeController from "./home.controller";
+import { container } from "tsyringe";
 import Implementer from "../../shared/Implementer";
+import HomeController from "./home.controller";
 
-const controller = Container.get(HomeController);
+const controller = container.resolve(HomeController);
 
 const homeRoute = Implementer({
-  path: "/",
-  method: "get",
-  attach: controller.sayHello,
+  conf: { path: "/", method: "get" },
+  attach: (req, res) => controller.sayHello(req, res),
 });
 
 export default homeRoute;

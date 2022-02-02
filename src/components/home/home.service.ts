@@ -1,9 +1,9 @@
 //service layer - your business logic
-import { Service } from "typedi";
 import HomeDAL from "./home.DAL";
 import { NHomeService } from "./home.types";
+import { injectable } from "tsyringe";
 
-@Service()
+@injectable()
 class HomeService {
   constructor(private homeDAL: HomeDAL) {}
 

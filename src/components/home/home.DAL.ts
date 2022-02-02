@@ -1,7 +1,7 @@
 // Data access layer - working with database
-import { Service } from "typedi";
+import { injectable } from "tsyringe";
 
-@Service()
+@injectable()
 class HomeDAL {
   create() {
     //Request to database

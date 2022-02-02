@@ -1,28 +1,27 @@
 /* eslint-disable security/detect-object-injection */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import express, { NextFunction, Request, Response } from "express";
 import { _attacher } from "../global/_attacher";
 
-type TAttach = (req: Request, res: Response, next?: NextFunction) => any;
+type TAttach = (req: Request, res: Response, next?: NextFunction) => Response;
 
 const Implementer = (
   ...routes: {
-    method: "post" | "put" | "patch" | "delete" | "use" | "get";
-    path: string;
+    conf: {
+      method: "post" | "put" | "patch" | "delete" | "use" | "get";
+      path: string;
+    };
     attach: TAttach[] | TAttach;
   }[]
 ) => {
   const app = express.Router();
-
-  routes.map(({ attach, method, path }) => {
+  routes.map(({ attach, conf: { method, path } }) => {
     const handler =
       attach instanceof Array
-        ? attach.map((item) =>
-            _attacher((req, res, next) => item(req, res, next))
-          )
-        : _attacher((req, res, next) => attach(req, res, next));
+        ? attach.map((item) => _attacher(item))
+        : _attacher(attach);
 
     app[method](path, handler);
+
     return null;
   });
 
