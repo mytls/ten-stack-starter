@@ -8,8 +8,9 @@ class HomeService {
   constructor(private homeDAL: HomeDAL) {}
 
   sayHello: NHomeService.TSayHello = () => {
-    const response = this.homeDAL.create();
-    return `${response} & Hello world`;
+    this.homeDAL.create(); // The result is: User Was Created From DAL
+
+    return "Hello world";
   };
 }
 
