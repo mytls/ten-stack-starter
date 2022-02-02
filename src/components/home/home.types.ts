@@ -1,4 +1,4 @@
-export namespace NHomeDto {
+export namespace NHomeCheckpoint {
   export type TValidateInput = {
     num: number;
   };
