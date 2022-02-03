@@ -1,5 +1,5 @@
 import express from "express";
 
-const appGlobal = express();
+const APP_GLOBAL = express();
 
-export default appGlobal;
+export default APP_GLOBAL;

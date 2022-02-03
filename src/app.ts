@@ -3,13 +3,13 @@ import bodyParser from "body-parser";
 import helmet from "./middlewares/helmet";
 import * as appGlobal from "./global/app.global";
 import _needs from "./global/_needs";
-import homeRoute from "./components/home/home.routes";
+import HOME_ROUTE from "./components/home/home.routes";
 
-const app = appGlobal.default;
+const APP = appGlobal.default;
 
 _needs({
-  app,
-  router: [{ path: "/", route: homeRoute }],
+  app: APP,
+  router: [{ path: "/", route: HOME_ROUTE }],
   middlewares: [
     bodyParser.urlencoded({ extended: false }),
     bodyParser.json({ limit: "300kb" }),
@@ -17,4 +17,4 @@ _needs({
   ],
 });
 
-export default app;
+export default APP;

@@ -2,11 +2,11 @@ import { container } from "tsyringe";
 import Implementer from "../../shared/Implementer";
 import HomeController from "./home.controller";
 
-const controller = container.resolve(HomeController);
+const CONTROLLER = container.resolve(HomeController);
 
-const homeRoute = Implementer({
+const HOME_ROUTE = Implementer({
   conf: { path: "/", method: "get" },
-  attach: (...data) => controller.sayHello(...data),
+  attach: (...data) => CONTROLLER.sayHello(...data),
 });
 
-export default homeRoute;
+export default HOME_ROUTE;
