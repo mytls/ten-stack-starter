@@ -6,7 +6,7 @@
   "bin": "bin/www.js",
   "scripts": {
     "build": "tsc",
-    "start": "concurrently --kill-others --names \"build,run\" -c \"blueBright.bold,magenta.bold\" \"tsc -w\" \"nodemon -q -w dist bin/www.js\"",
+    "start": "concurrently --kill-others --names \"build,run\" -c \"yellow.bold,green.bold\" \"tsc -w\" \"nodemon -q -w dist bin/www.js\"",
     "test": "npx mocha",
     "test:watch": "npx mocha --watch",
     "lint": "eslint src/**/*.ts --fix",
