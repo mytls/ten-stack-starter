@@ -48,6 +48,17 @@ npm i -g mmdzov-cli
 mmdzov use ten <project-name>
 ```
 
+**Add New Resource**
+
+ - Creates a complete template of a component that contains several files.
+Exactly the same as the resource in nest.js 
+
+```npm
+mmdzov ten res <resource-name>
+```
+> like : mmdzov ten res shop
+
+
 [more...](https://github.com/mmdzov/mmdzov-cli)
 
 **Clone**
