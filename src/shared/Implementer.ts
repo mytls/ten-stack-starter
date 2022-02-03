@@ -2,7 +2,11 @@
 import express, { NextFunction, Request, Response } from "express";
 import _attacher from "../global/_attacher";
 
-type TAttach = (req: Request, res: Response, next?: NextFunction) => Response;
+type TAttach = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => Response | NextFunction | void;
 
 const Implementer = (
   ...routes: {

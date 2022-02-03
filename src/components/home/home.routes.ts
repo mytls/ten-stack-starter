@@ -6,7 +6,7 @@ const controller = container.resolve(HomeController);
 
 const homeRoute = Implementer({
   conf: { path: "/", method: "get" },
-  attach: (req, res) => controller.sayHello(req, res),
+  attach: (...data) => controller.sayHello(...data),
 });
 
 export default homeRoute;

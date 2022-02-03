@@ -1,6 +1,7 @@
-// - data transfer object / You can validate the inputs before reaching the service
+// - You can validate the inputs before reaching the service
 import { NHomeCheckpoint } from "./home.types";
 import { injectable } from "tsyringe";
+
 @injectable()
 class HomeCheckpoint {
   validate: NHomeCheckpoint.TValidate<NHomeCheckpoint.TValidateInput> = (
