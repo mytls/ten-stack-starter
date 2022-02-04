@@ -61,6 +61,7 @@
     "nodemon": "^2.0.15",
     "npm-check-updates": "^12.2.1",
     "reflect-metadata": "^0.1.13",
+    "ten-stack-requires": "^1.0.15",
     "tsyringe": "^4.6.0"
   }
 }

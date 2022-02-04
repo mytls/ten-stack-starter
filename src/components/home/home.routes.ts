@@ -1,5 +1,5 @@
+import { Implementer } from "ten-stack-requires";
 import { container } from "tsyringe";
-import Implementer from "../../shared/Implementer";
 import HomeController from "./home.controller";
 
 const CONTROLLER = container.resolve(HomeController);

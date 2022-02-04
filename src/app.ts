@@ -1,11 +1,11 @@
 import "reflect-metadata";
 import bodyParser from "body-parser";
 import helmet from "./middlewares/helmet";
-import * as appGlobal from "./global/app.global";
-import _needs from "./global/_needs";
+import { _needs } from "ten-stack-requires";
 import HOME_ROUTE from "./components/home/home.routes";
+import express from "express";
 
-const APP = appGlobal.default;
+const APP = express();
 
 _needs({
   app: APP,

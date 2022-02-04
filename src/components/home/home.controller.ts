@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 import HomeCheckpoint from "./home.checkpoint";
 import HomeService from "./home.service";
 import { injectable } from "tsyringe";
-import { Next } from "../../..";
+import { Next } from "ten-stack-requires";
 
 @injectable()
 class HomeController {
