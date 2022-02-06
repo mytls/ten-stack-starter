@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { describe, it } from "mocha";
 import { expect } from "chai";
 import HomeService from "./home.service";
