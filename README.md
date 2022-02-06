@@ -2,7 +2,7 @@
 
 Typescript + Express.js + Node.js Starter with best practice structure
 
-🦺Safety when developing with liners.
+🦺Safety when developing with linter.
 
 🔥Easy test with mocha & chai & supertest.
 
